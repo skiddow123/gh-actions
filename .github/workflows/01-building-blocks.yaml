@@ -15,7 +15,7 @@ jobs:
             - name: Failed Hard
               run: |
                 echo "We reached the end"
-                exit 1
+                exit 0
             - name: Bid Goodbye
               run: echo "Byeeeee"
     
