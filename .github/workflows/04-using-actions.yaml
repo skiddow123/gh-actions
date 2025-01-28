@@ -5,6 +5,10 @@ on:
 
 jobs:
     setup-node:
+        defaults:
+          run:
+            working-directory: 04-using-actions/react-app
+            
         runs-on: ubuntu-latest
         steps:
            - name: Checkout Code
@@ -16,10 +20,8 @@ jobs:
                node-version: 23.6.1
 
            - name: install NPM Packages
-             working-directory: 04-using-actions/react-app
              run: npm ci
 
            - name: Run React App
-             working-directory: 04-using-actions/react-app
              run: npm run start
 
