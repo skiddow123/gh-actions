@@ -1,0 +1,17 @@
+name: 05-1-Filters Activity Events
+
+on: 
+    pull_request: 
+        types:
+            - opened
+            - synchronize
+        branches: 
+            - main
+
+jobs:
+    echo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Echo
+              run: echo "Hello World!!"
+        
