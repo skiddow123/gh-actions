@@ -1,0 +1,15 @@
+name: 05-2-Filters Activity Events
+
+on:
+    pull_request: 
+        types: 
+            - closed
+        branches: 
+            - main
+
+jobs: 
+    print-close-message:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Echo It
+              run: echo "PR was closed"
