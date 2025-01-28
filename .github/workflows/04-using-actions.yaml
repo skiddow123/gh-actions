@@ -17,7 +17,7 @@ jobs:
            - name: Setup Node
              uses: actions/setup-node@v4
              with:
-               node-version: 23.6.1
+               node-version: 22.3.1
 
            - name: Install Angular CLI
              run: npm install -g @angular/cli
@@ -25,5 +25,5 @@ jobs:
            - name: Run test
              run: |
                 npm install
-                ng test --watch=false browsers=ChromeHeadless
+                ng test --no-watch --no-progress browsers=ChromeHeadless
 
