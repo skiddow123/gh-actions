@@ -17,4 +17,4 @@ jobs:
             - name: echo runner OS
               run: |
                 echo "Hello, I am the runner."
-                echo "I am running on $RUNNER_OS"
+                echo "I am running on %RUNNER_OS%"
