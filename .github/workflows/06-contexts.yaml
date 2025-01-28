@@ -1,8 +1,12 @@
 name: 06-Contexts
-run-name: "Failed ${{runner.temp}}"
+run-name: "nun-name: ${{inputs.name}}"
 
 on:
     workflow_dispatch: 
+        inputs:
+            name: 
+                type: boolean
+                default: false
     push: 
         branches: 
             - main
