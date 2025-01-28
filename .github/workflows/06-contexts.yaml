@@ -1,10 +1,10 @@
 name: 06-Contexts
-run-name: "nun-name: ${{inputs.name}}"
+run-name: " || DEBUG: ${{inputs.debug}}"
 
 on:
     workflow_dispatch: 
         inputs:
-            name: 
+            debug: 
                 type: boolean
                 default: false
     push: 
