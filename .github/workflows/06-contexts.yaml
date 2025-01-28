@@ -1,0 +1,27 @@
+namr: 06-Contexts
+
+on:
+    push: 
+        branches: 
+            - main
+
+jobs:
+    echo-contexts:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Echo gitthub Context
+              run: |
+                echo "Event: ${{github.event_name}}"
+                echo "SHA: ${{github.sha}}"
+                echo "Workflow: ${{github.workflow}}"
+                echo "Run ID: ${{github.run_id}}"
+                echo "Ref: ${{github.ref}}"
+                echo "Run Number: ${{github.run_number}}"
+            - name: Echo gitthub Context
+              run: |
+                echo "Event: ${{github.event_name}}"
+                echo "SHA: ${{github.sha}}"
+                echo "Workflow: ${{github.workflow}}"
+                echo "Run ID: ${{github.run_id}}"
+                echo "Ref: ${{github.ref}}"
+                echo "Run Number: ${{github.run_number}}"
