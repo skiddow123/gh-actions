@@ -25,5 +25,5 @@ jobs:
            - name: Run test
              run: |
                 npm install
-                ng test --no-watch --no-progress browsers=ChromeHeadless
+                ng test --no-watch --no-progress --browsers=ChromeHeadless
 
