@@ -16,11 +16,10 @@ jobs:
                node-version: 23.6.1
 
            - name: install NPM Packages
-             run: |
-                cd 04-using-actions/react-app
-                npm install
-                
+             working-directory: 04-using-actions/react-app
+             run: npm ci
+
            - name: Run React App
-             run: |
-                npm run start
+             working-directory: 04-using-actions/react-app
+             run: npm run start
 
