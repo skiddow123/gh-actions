@@ -9,6 +9,8 @@ jobs:
         steps:
            - name: Checkout 
              uses: actions/checkout@v4
+           - name: echo PWD
+             run: pwd  
            - name: install NPM Packages
              run: |
                 cd 04-using-actions/react-app
