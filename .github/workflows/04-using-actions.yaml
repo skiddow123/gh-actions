@@ -7,14 +7,20 @@ jobs:
     setup-node:
         runs-on: ubuntu-latest
         steps:
-           - name: Checkout 
+           - name: Checkout Code
              uses: actions/checkout@v4
-           - name: echo PWD
-             run: pwd  
+
+           - name: Setup Node
+             uses: actions/setup-node@v4
+             with:
+               node-version: 23.6.1
+
            - name: install NPM Packages
              run: |
                 cd 04-using-actions/react-app
                 npm install
-           - name: Run App
-             run: npm run start
+                
+           - name: Run React App
+             run: |
+                npm run start
 
