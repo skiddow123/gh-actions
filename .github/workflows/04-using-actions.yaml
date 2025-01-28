@@ -4,11 +4,11 @@ on:
     push:
 
 jobs:
-    setup-node:
+    build:
         defaults:
           run:
             working-directory: 04-using-actions/react-app
-            
+
         runs-on: ubuntu-latest
         steps:
            - name: Checkout Code
@@ -22,6 +22,6 @@ jobs:
            - name: install NPM Packages
              run: npm ci
 
-           - name: Run React App
-             run: npm run start
+           - name: Run test
+             run: npm run test
 
