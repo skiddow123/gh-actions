@@ -1,5 +1,7 @@
 name: 06-Contexts
 run-name: " || DEBUG: ${{inputs.debug}}"
+env:
+    WORKFLOW_ENV: "workflow"
 
 on:
     workflow_dispatch: 
@@ -13,6 +15,9 @@ on:
 
 jobs:
     echo-contexts:
+        env: 
+            Jobs_ENV: "Jobs ENV"
+
         runs-on: ubuntu-latest
         steps:
             - name: Echo gitthub Context
@@ -26,4 +31,5 @@ jobs:
             - name: Echo VARS Context
               run: |
                 echo "Variable: ${{vars.MY_VAR}}"
+                echo "ENV: ${{env.Jobs_ENV}}"
                 
