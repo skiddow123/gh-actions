@@ -12,7 +12,7 @@ jobs:
            - name: install NPM Packages
              run: |
                 cd 04-using-actions/react-app
-                npm insatll
+                npm install
            - name: Run App
              run: npm run start
 
