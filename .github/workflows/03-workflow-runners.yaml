@@ -4,8 +4,15 @@ on:
     push:
 
 jobs:
-    get-runner-os:
+    get-linux-runner-os:
         runs-on: ubuntu-latest
+        steps:
+            - name: echo runner OS
+              run: |
+                echo "Hello, I am the runner."
+                echo "I am running on $RUNNER_OS"
+    get-windows-runner-os:
+        runs-on: windows-latest
         steps:
             - name: echo runner OS
               run: |
