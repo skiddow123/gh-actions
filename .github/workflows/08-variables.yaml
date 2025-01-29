@@ -6,7 +6,7 @@ on:
     workflow_dispatch: 
 
 env:
-    WORKFLOW_VAR: "workflow varaible"
+    WORKFLOW_ENV: "workflow varaible"
 
 jobs:
     echo:
