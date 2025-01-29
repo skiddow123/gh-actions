@@ -9,9 +9,9 @@ on:
             debug: 
                 type: boolean
                 default: false
-    push: 
-        branches: 
-            - main
+    # push: 
+    #     branches: 
+    #         - main
 
 jobs:
     echo-contexts:

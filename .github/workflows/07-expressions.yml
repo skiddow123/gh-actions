@@ -1,5 +1,5 @@
 name: 07 - Using Expressions
-run-name: 07 - Using Expressins ${{github.run_id}}
+run-name: 07 - Using Expressins ${{github.run_id}} - username ${{github.actor}}
 
 on:
     push:
@@ -21,6 +21,6 @@ jobs:
                 echo "Branch Name: ${{github.ref_name}}"
                 echo "Runner Arch: ${{runner.arch}}"
             - name: echo if debug is true and branch is main
-              if: ${{inputs.debug && github.ref_name == 'main'}}
+              if: inputs.debug && github.ref_name == 'main'
               run: echo "Triggerd because debug is true and branch is main"
               
