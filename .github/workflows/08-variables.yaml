@@ -21,4 +21,27 @@ jobs:
                 echo "work: ${{env.WORKFLOW_ENV}}"
                 echo "job: ${{env.JOB_VAR}}"
                 echo "step: ${{env.STEP_VAR}}"
+    echo1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print org vars
+              run: |
+                echo "org var: ${{vars.ORG_VAR}}" 
+                echo "org var: ${{vars.OVERWRITTEN_VAR}}" 
+    echo2:
+        runs-on: ubuntu-latest
+        environment: stagging
+        steps:
+          - name: Print STAGING Environment vars
+            run: |
+                echo "org var: ${{vars.STAGING_VAR1}}" 
+
+    echo3:
+        runs-on: ubuntu-latest
+        environment: production
+        steps:
+            - name: Print PROD Environment vars
+              run: |
+                echo "org var: ${{vars.PRODUCTION_VAR1}}" 
+                echo "org var: ${{vars.PRODUCTION_VAR2}}" 
 
