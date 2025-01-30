@@ -30,7 +30,7 @@ jobs:
                 echo "org var: ${{vars.OVERWRITTEN_VAR}}" 
     echo2:
         runs-on: ubuntu-latest
-        environment: stagging
+        environment: staging
         steps:
           - name: Print STAGING Environment vars
             run: |
