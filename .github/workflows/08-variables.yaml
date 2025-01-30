@@ -24,7 +24,7 @@ jobs:
     echo1:
         runs-on: ubuntu-latest
         steps:
-            - name: Print org vars
+            - name: Print ORG vars
               run: |
                 echo "org var: ${{vars.ORG_VAR}}" 
                 echo "org var: ${{vars.OVERWRITTEN_VAR}}" 
